@@ -1,0 +1,7 @@
+pytorch-lightening
+transformers
+wandb
+tqdm
+numpy
+pandas
+torch
