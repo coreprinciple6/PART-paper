@@ -141,6 +141,7 @@ def main():
                               max_len=CHUNK_SIZE,
                               tokenizer = AutoTokenizer.from_pretrained(BASE_CODE),
                               mode='text')
+    print('Datasets built!')
 
     # Name model
     model_datasets = '+'.join(USED_FILES)
@@ -164,6 +165,7 @@ def main():
                     devices=1,
                     max_steps=TRAINING_STEPS,
                     min_epochs=3,
+                    max_epochs=10,
                     #log_every_n_steps=1,
                     #flush_logs_every_n_steps=500,
                     logger=wandb_logger,
